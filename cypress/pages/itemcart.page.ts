@@ -11,7 +11,7 @@ export class ItemCartPage {
     }
 
     addItemFromCart(itemName: string){
-        cy.contains(itemName).find(addItem).click();
+        cy.contains(itemName).scrollIntoView().find(addItem).click();
     }
 
     emptyCart(){

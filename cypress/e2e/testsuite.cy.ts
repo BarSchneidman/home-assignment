@@ -17,25 +17,25 @@ describe('Costumer Service tests', () => {
         navBar.lookforItem(pencilSharpener);
         resultPage.gotoItemsPage(pencilSharpenerItemName);
         item.addItemToCart();
-        //navBar.gotoCart();
-        //itemCart.checkForItemInCart(bostitchShort);
+        navBar.gotoCart();
+        itemCart.checkForItemInCart(bostitchShort);
         cy.visit(scissorsUrl);
         item.chooseVersionOfItem(scissorsVersion, scissorsColor);
         item.addItemToCart();
-        //navBar.gotoCart();
-        //itemCart.checkForItemInCart(scissorsColor);
+        navBar.gotoCart();
+        itemCart.checkForItemInCart(scissorsColor);
     });
 
     it('Items in cart', () => {
         navBar.goHome();
         navBar.gotoCart();
-        //itemCart.checkForItemInCart(scissorsColor);
-        //itemCart.checkForItemInCart(bostitchShort);
-        //navBar.goHome();
+        itemCart.checkForItemInCart(scissorsColor);
+        itemCart.checkForItemInCart(bostitchShort);
+        navBar.goHome();
     });
 
     afterEach(() => {
-        //navBar.gotoCart();
+        navBar.gotoCart();
         itemCart.checkFreeShippingStatus('eligible items to your order for FREE Shipping.');
         itemCart.addItemFromCart(bostitchShort);
         itemCart.addItemFromCart(bostitchShort);
