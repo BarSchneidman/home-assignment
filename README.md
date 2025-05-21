@@ -1,7 +1,10 @@
 # home assignment
-To initialize:
+To run:
 -npm i 
--npm test-ui 
+-npm run test-ui 
+-on cypress' framework, choose E2E testing
+-choose a browser
+-choose a test file to run
 
 Attention:
 Amazon's prod environment uses CAPTCHA to detact bots & automated frameworks trying to run scripts on it's services. 
