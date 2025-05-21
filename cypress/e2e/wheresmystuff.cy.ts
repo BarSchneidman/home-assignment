@@ -5,8 +5,11 @@ describe('Costumer Service tests', () => {
   const navBar: NavBar = new NavBar();
   const costumerservicepage: CostumerServicePage = new CostumerServicePage();
 
-  it('Clicking wheres my stuff should show transfer to order status page', () => {
+  beforeEach(() => {
     cy.login();
+  });
+
+  it('Clicking wheres my stuff should show transfer to order status page', () => {
     navBar.checkMenuOptions();
     navBar.openMenuOption('Customer Service');
     costumerservicepage.openWheresMyStufTab();
