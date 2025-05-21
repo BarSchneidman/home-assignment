@@ -1,5 +1,9 @@
 /// <reference types="cypress" />
 
-Cypress.Commands.add('login', () => { 
+import { dismissToaster } from "../statics/navbar";
+
+Cypress.Commands.add('login', () => {
     cy.visit('/');
-})
+    cy.wait(15000);
+    cy.get(dismissToaster).click();
+});

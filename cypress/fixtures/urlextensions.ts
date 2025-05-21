@@ -1,0 +1,1 @@
+export const scissorsUrl: string = '/Scissors-iBayam-Crafting-Scrapbooking-Knitting/dp/B07H3QKN2Z';
